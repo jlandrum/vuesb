@@ -59,7 +59,7 @@ class ContextMenu {
   constructor(private data?: any) {}
 
   public open(event: any) {
-    //if (event.target !== event.currentTarget) return;
+  //if (event.target !== event.currentTarget) return;
     if (ContextMenu.instance) {
       ContextMenu.instance.$el.classList.remove('visible');
     }
@@ -67,9 +67,9 @@ class ContextMenu {
     let inst = ContextMenu.instance;
     inst.data = this.data.menu || this.data || [];
     inst.onclick = this.data.callback || (()=>{});
-    inst.target = event.target;
+    inst.target = event.currentTarget;
     inst.$mount();
-    event.target.insertBefore(inst.$el, event.target.firstChild);
+    inst.target!!.insertBefore(inst.$el, inst.target!!.firstChild);
     setTimeout(()=>inst.$el.classList.add('visible'),1);
     let popup = inst.$el.querySelector('.context-menu--menu') as HTMLElement;
     let rect = inst.$el.getBoundingClientRect();
