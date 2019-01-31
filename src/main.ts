@@ -1,5 +1,7 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+
+import Icon from './features/icons';
 
 Vue.config.productionTip = false
 
