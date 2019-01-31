@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "docs": "build-storybook -c .storybook -o docs"
+    "docs": "storybook-to-ghpages"
   },
   "dependencies": {
     "vue": "^2.5.21",
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/vue": "^4.1.11",
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-plugin-eslint": "^3.3.0",
