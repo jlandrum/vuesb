@@ -1,0 +1,33 @@
+.story {
+  h1,h2,h3,h4,h5,h6 {
+    margin-left: 16px;
+  }
+  font-family: sans-serif;
+  section {
+    background: rgba(0,0,0,0.05);
+    padding: 8px 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    display: block;
+    details {
+      &[open] {
+        summary { padding-bottom: 16px }
+      }
+      summary {
+        font-size: 14px;
+      }
+      border-radius: 8px;
+      background: rgb(255,255,255);
+      padding: 16px;
+      .button {
+        border-radius: 6px;
+        padding: 8px 16px;
+        border: 1px solid rgb(160,200,130);
+        background-color: rgb(180,220,120);
+        &:hover, &:active {
+          background-color: rgb(220,240,180);
+        }
+      }
+    } 
+  }
+}
