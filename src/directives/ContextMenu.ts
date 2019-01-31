@@ -18,13 +18,13 @@ class ContextMenuComponent extends Vue {
   public target? : HTMLElement;
 
   set data(input: any[] | undefined) {
-    this._data = input.map( (it : any) => {
+    this._data = (input || []).map( (it : any) => {
       switch (true) {
         case it instanceof String:
           return { text: it }
         case it instanceof Object:
           return it;
-        case it instanceof ((string, HTMLElement)=>null):
+        case it instanceof ((a:string, b:HTMLElement)=>null):
           return it;
       }
       }).filter( (it: any) => it instanceof Object );
@@ -37,7 +37,7 @@ class ContextMenuComponent extends Vue {
     this.$el.classList.remove('visible');
     setTimeout(()=>{
       this.$el.classList.remove('context-menu__right')
-      this.$el.parentNode.removeChild(this.$el)
+      this.$el.parentNode!!.removeChild(this.$el)
     }, 200);
   }
 

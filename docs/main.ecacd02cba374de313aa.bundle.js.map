@@ -1,0 +1,1 @@
+{"version":3,"file":"main.ecacd02cba374de313aa.bundle.js","sources":["webpack:///./src/features/icons.ts"],"sourcesContent":["export default class Icon {\n  static MENU = new Icon('menu', 'ellipses');\n\n  constructor(public readonly label: string, public readonly klass: string) {}\n};\n\n"],"mappings":"AAAA","sourceRoot":""}
